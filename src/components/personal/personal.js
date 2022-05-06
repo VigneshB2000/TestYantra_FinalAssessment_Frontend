@@ -25,6 +25,18 @@ const styles = (theme) => ({
 });
 
 class Personal extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      firstname: "",
+      lastname: "",
+      email: "",
+      formError: { firstname: "", lastname: "", email: "" },
+      fnameValid: false,
+      lnameValid: false,
+      formValid: false,
+    };
+  }
   continue = (e) => {
     e.preventDefault();
     this.props.nextStep();
@@ -50,7 +62,7 @@ class Personal extends Component {
                     label="First Name"
                     style={{ width: "80%" }}
                     required
-                    // value={values.firstname}
+                    value={this.state.firstname}
                     onChange={this.props.handleChange}
                   />
                 </Grid>
@@ -62,7 +74,7 @@ class Personal extends Component {
                     style={{ width: "80%" }}
                     name="lastname"
                     required
-                    // value={values.lastname}
+                    value={this.state.lastname}
                     onChange={this.props.handleChange}
                   />
                 </Grid>
@@ -75,7 +87,7 @@ class Personal extends Component {
                     name="email"
                     required
                     style={{ alignItems: "left", width: "80%" }}
-                    // value={values.email}
+                    value={this.state.email}
                     onChange={this.props.handleChange}
                     InputProps={{
                       endAdornment: (

@@ -250,7 +250,7 @@ class Experience extends Component {
               <Col xs={2}>
                 <Link to="/page4">
                   <Button
-                    style={{ margin: "15px 0px 10px 400px", float: "left" }}
+                    style={{ margin: "15px 0px 10px 400px", float: "right" }}
                     variant="contained"
                     color="secondary"
                     // onClick={this.back}
@@ -261,7 +261,7 @@ class Experience extends Component {
               </Col>
               <Col xs={2}>
                 <Button
-                  style={{ margin: "15px 420px 10px 0px", float: "right" }}
+                  style={{ margin: "15px 420px 10px 0px", float: "left" }}
                   variant="contained"
                   disabled
                   color="secondary"
